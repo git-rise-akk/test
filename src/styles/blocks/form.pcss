@@ -10,83 +10,140 @@
         margin-right: 92px;
         width: 100%;
 
+        .user_block {
+            display: flex;
+
+            &:hover .input__txt {
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #5500f2;
+                transition: 0.3s;
+            }
+        }
+
         .name__form {
             margin-bottom: 22px;
-            opacity: 0.3;
+            opacity: 0.3; 
         }
+
+        &:hover .user_block-icon {
+        fill:  #4a00ed;
+        opacity: 1;
+        transition: 0.3s;
+    }
     }
 }
 
 .email__block {
     width: 100%;
 
+
     .email__container {
         display: flex;
     }
 
-    .email {
+    .email__block__title {
         margin-bottom: 22px;
         opacity: 0.3; 
-    }   
+    } 
+
+    &:hover .email__container-icon {
+        fill:  #4a00ed;
+        opacity: 1;
+        transition: 0.3s;
+    }
+
+    &:hover .input__email {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #5500f2;
+        transition: 0.3s;
+    }
 }
 
-.massege {
+.coment__block__title {
     margin-bottom: 22px;
     opacity: 0.3;
 }
 
-.coment {
-    resize: none;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.input__txt, .input__email {
-    border: none;
-    width: 100%;
-    background: transparent;
-}
-
-.line {
-    position: relative;
-    width: 100%;
-    height: 1px;
-    background-color: #464d62;
-}
-
-.user {
-    width: 30px;
-    height: 26px;
-    fill: #464d62;
-    margin-right: 20px;
-    margin-bottom:  15px;
-    opacity: 0.3;
-    margin-right: 20px;
-}
-
-.envelope {
-    width: 30px;
-    height: 26px;
-    margin-right: 20px;
-    margin-bottom:  15px;
-    fill: #464d62;
-    opacity: 0.3;
-}
-
-.message {
-    width: 30px;
-    height: 30px;
-    fill: #464d62;
-    margin-right: 20px;
-    margin-bottom:  15px;
-    opacity: 0.3;
-}
-
-.user_block {
-    display: flex;
-}
-
 .coment__block {
     display: flex;
+    position: relative;
+
+    .coment__block-icon {
+        width: 30px;
+        height: 30px;
+        fill: #464d62;
+        margin-right: 20px;
+        margin-bottom:  15px;
+        opacity: 0.3;
+    
+
+        &--active {
+            fill: #4a00ed;
+            opacity: 1;
+            transition: 0.3s;
+        }
+    }
+    
+
+    &:hover .coment {
+        transition: 0.3s;
+        border: none;
+        border-bottom: 1px solid #5500f2;
+    }
+
+    &:hover .coment__block-icon {
+        fill: #5500f2;
+        opacity: 1;
+        transition: 0.3s;
+    }
 }
+
+.input__txt, .input__email, .coment {
+    border: none;
+    border-bottom: 1px solid #464d62; 
+    width: 100%;
+    background: transparent;
+
+    &:focus {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #5500f2;
+        transition: 0.3s;  
+    }
+
+}
+
+.user_block-icon {
+    width: 30px;
+    height: 26px;
+    fill: #464d62;
+    margin-right: 20px;
+    margin-bottom:  15px;
+    opacity: 0.3;
+    margin-right: 20px;
+
+    &--active {
+        fill: #4a00ed;
+        opacity: 1;
+        transition: 0.3s;
+    }
+}
+
+.email__container-icon {
+    width: 30px;
+    height: 26px;
+    margin-right: 20px;
+    margin-bottom:  15px;
+    fill: #464d62;
+    opacity: 0.3;
+
+    &--active {
+        fill: #4a00ed;
+        opacity: 1;
+        transition: 0.3s;
+    }
+}
+
+

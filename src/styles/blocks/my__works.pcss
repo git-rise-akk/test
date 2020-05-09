@@ -32,8 +32,13 @@
     position: absolute;
     bottom: 0;
     right: 0;
+}
 
-
+.little__cover{
+    
+    &:hover {
+        background: #5500f2;
+    }
 }
 
 .technologies {
@@ -89,9 +94,17 @@
     font-weight: bold;
 }
 
-.little__cover {
-    
+.cover__img {  
+
     &:hover {
-        background: #fff;
+        opacity: .5;
     }
+}
+
+.cover__img--active {
+    border: 2px solid #5500f2;
+
+    &:hover {
+        opacity: 1;
+    }  
 }

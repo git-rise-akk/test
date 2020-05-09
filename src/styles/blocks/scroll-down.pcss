@@ -5,7 +5,15 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 50px;
+    margin-bottom: 80px;
+
+    &:hover {
+        @include hover__color;
+    }
+
+    &:hover .scroll__icons {
+        @include hover__svg;
+    }
 
     .scroll-down-btn {
         text-decoration: none;
