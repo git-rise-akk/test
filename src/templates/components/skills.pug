@@ -1,24 +1,24 @@
 script(type="text/x-template")#skills-list
     .values-section__content
-        -
-        var items = [
-            ["Front-end", ["HTML5", "CSS3", "Javascript", "Jquery и Vue.js"]],
-            ["Workflow", ["GIT", "Terminal", "Gulp", "Webpack"]],
-        ];
-
         ul.skills__list
-        each row in items 
             li.skills-list__item.skills-row
-            .skills-row__title #{row[0]}
-            ul.skills-row__list
-                each cell in row[1]
-                li.skills-row__item
-                    .skill
-                    svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__circle
-                        defs.defs
-                        linearGradient(x1="0%" y1="50%" x2="100%" y="100%")#skill__gradient
-                            stop(offset="0%" stop-color="#7b00e9")
-                            stop(offset="100%" stop-color="#4a00ed")
-                        circle( r="67" cx="100" cy="100").skill__circle.skill__circle--under
-                        circle( r="67" cx="100" cy="100" stroke="url(#skill__gradient)").skill__circle.skill__circle--above
-                    .skill__title= cell
+                skills-row
+                
+
+script(type="text/x-template")#skills-row
+    .skills-row__title
+        ul.skills-row__list
+            li.skills-row__item
+                skill
+                
+
+script(type="text/x-template")#skill
+    .skill
+        svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__circle
+            defs.defs
+            linearGradient(x1="0%" y1="50%" x2="100%" y="100%")#skill__gradient
+                stop(offset="0%" stop-color="#7b00e9")
+                stop(offset="100%" stop-color="#4a00ed")
+            circle( r="67" cx="100" cy="100").skill__circle.skill__circle--under
+            circle( r="67" cx="100" cy="100" stroke="url(#skill__gradient)").skill__circle.skill__circle--above
+        .skill__title
