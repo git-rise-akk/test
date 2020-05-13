@@ -16,6 +16,12 @@
   }
 }
 
+@mixin tablets-600 {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
 @mixin phones() {
   @media screen and (max-width: $bp-phones) {
     @content;

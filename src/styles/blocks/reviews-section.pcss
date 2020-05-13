@@ -8,10 +8,20 @@
     margin-bottom: 96px;
     padding-top: 220px;
 
+    @include phones() {
+        display: block;
+        margin-bottom: 33px;
+    }
+
     .reviews__title {
         font-size: 36px;
         font-weight: bold;
         margin-right: 77px;
+
+        @include phones() {
+            text-align: center;
+            margin: 0 auto 26px;
+        }
     }
 }
 

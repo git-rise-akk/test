@@ -8,6 +8,14 @@
 
 .header__btns {
   margin: 0 20px;
+
+  @include desktop() {
+    width: 70%;
+  }
+
+  @include tablets() {
+    display: none;
+  }
 }
 
 .menu__item {
@@ -37,4 +45,15 @@
   height: 1px;
   margin-top: 2px;
   background: #5500f2;
+}
+
+.header__links {
+  
+  @include tablets() {
+    margin-left: auto;
+  }
+
+  @include phones() {
+    display: none;
+  }
 }

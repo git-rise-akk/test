@@ -7,11 +7,28 @@
     bottom: 100%;
     left: 0;
     right: 0;
+
+    @include phones() {
+        display: none;
+    }
 }
 
 .longtitle__txt {
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 59px;
+
+    @include tablets() {
+        text-align: center;
+        width: 70%;
+        margin: 0 auto 59px;
+    }
+
+    @include tablets() {
+        text-align: left;
+        width: 100%;
+        margin: 0 auto 59px;
+    } 
 
 }
 
@@ -20,31 +37,76 @@
     display: flex;
     align-items: center;
 
+    @include tablets() {
+        width: 316px;
+        margin: 0 auto;
+        position: absolute;
+        bottom: -350px;
+        left: 50%;
+        transform: translate(-50%);
+    } 
+
     .backpack__img {
         display: block;
         max-width: 100%;
     }
 }
 
-.longtitle__txt {
-    margin-bottom: 59px;
-}
 
 .longtitle__desc {
-    margin-bottom: 96px;
     opacity: 0.5;
+
+    @include tablets() {
+        text-align: center;
+    }
+
+    @include phones() {
+        text-align: left;
+    } 
 }
 
 .skills-row__title {
     font-weight: bold;
     margin-bottom: 41px;
 
+    @include tablets() {
+        text-align: center;
+        margin-top: 60px;
+    } 
+
 }
 
 .skills-row__list {
     display: flex;
+
+    @include tablets() {
+        justify-content: center;
+    }
+
+    @include phones() {
+        flex-wrap: wrap;
+    }
+     
 }
 
 .values__section__title {
     width: 60%;
+
+    @include tablets() {
+        width: 100%;
+    }
+
+    .values-section__title-content {
+        margin-bottom: 96px;
+
+        @include tablets() {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @include phones() {
+            width: 100%;
+            margin: 0 auto;
+        }
+    } 
 }

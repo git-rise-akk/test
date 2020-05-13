@@ -1,10 +1,26 @@
 .menu__list {
     display: flex;
 
-}
+    @include desktop() {
+        justify-content: space-between;
+    }
 
+   @include tablets() {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    } 
+}
 .menu__item {
     margin-right: 60px;
+
+    @include desktop() {
+        margin: 0;
+    }
+
+    @include tablets() {
+        margin-right: 60px;
+        margin-bottom: 32px;
+    } 
 
     &:last-child {
         margin-right: 0;

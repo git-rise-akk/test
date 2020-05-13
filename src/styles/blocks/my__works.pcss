@@ -2,36 +2,81 @@
     position:relative;
     margin-top: 176px;
     margin-bottom: 55px;
+
+    @include tablets() {
+        margin-top: 400px;
+    }
 }
 
 .my__works__title {
     font-weight: bold;
     font-size: 36px;
-    margin-bottom:92px;   
+    margin-bottom:92px;
+
+    @include phones() {
+        text-align: center;
+    }   
 }
 
 .my__works__container {
     display: flex;
 
+    @include tablets() {
+      display: block;
+    }
+
     .my__works-left {
         margin-right: 130px;
         position: relative;
+
+        @include desktop() {
+            width: 70%;
+            margin: 0;
+        }
+
+        @include tablets() {
+            width: 100%;
+        }
+
+        @include phones() {
+            margin-bottom: 59px;
+        }
     }
 
     .my__works-right {
         width: 25%;
+
+        @include tablets() {
+            width: 55%;
+            margin: 119px auto 0;
+            text-align: center
+        }
+
+        @include phones() {
+            width: 100%;
+            text-align: left;
+        }
     }
 }
 
 .big__cover {
     position: relative;
-    width: 623px;  
+    max-width: 623px;  
 }
 
 .little__covers  {
     position: absolute;
     bottom: 0;
     right: 0;
+    max-height: 100%;
+
+    @include phones() {
+        display: none;
+    }
+
+    @include tablets-600() {
+        display: none;
+    }      
 }
 
 .little__cover{
@@ -62,23 +107,10 @@
     margin-bottom: 44px;
 }
 
-.link__site {
-    text-decoration: none;
-    font-size: 18px;
-    color: #586ed3;
-    font-weight: bold;
-
-    .look {
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    
-}
-
 .site__content {
     margin-bottom: 50px;
+    opacity: 0.7;
+    color: #414c63;
 }
 
 .container__covers {
@@ -92,6 +124,14 @@
     font-size: 300px;
     color: #e6e6e6;
     font-weight: bold;
+
+    @include desktop() {
+        right: 67px;
+    }
+
+    @include phones() {
+        display: none;
+    }
 }
 
 .cover__img {  

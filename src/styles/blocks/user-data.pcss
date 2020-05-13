@@ -2,15 +2,49 @@
     padding: 120px;
     text-align: center;
 
+    @include desktop() {
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    @include tablets() {
+        display: block;
+    }
+
+    @include phones() {
+       padding: 120px;
+    }   
+
     .user-data__desc {
-    color: #464d62;
-    font-size: 18px;
-    margin-bottom: 10px;
-    opacity: 0.4;
+        color: #464d62;
+        font-size: 18px;
+        margin-bottom: 10px;
+        opacity: 0.4;
+
+        @include desktop() {
+            margin-top: 22px;
+        }
+
+        @include phones() {
+            font-size: 14px;
+        }
     }
 
     .user-data__name {
-    font-size: 72px;
-    font-weight: bold;
+        font-size: 72px;
+        font-weight: bold;
+
+        @include phones() {
+            font-size: 36px;
+        }
     }
+}
+
+.user-info__data {
+    margin: 0 auto;
+}
+
+.user-info__content {
+    margin-bottom: 51px;
 }

@@ -1,0 +1,40 @@
+.hamburger {
+    width: 24px;
+    height: 4px;
+    background: #414c63;
+    position: relative;
+    display: none;
+    margin-left: 93px;
+
+    @include tablets {
+        display: flex;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 4px;
+        background: #414c63;
+        position: absolute;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 4px;
+        background: #414c63;
+        position: absolute;
+    }
+}
+
+.hamburger::after {
+    bottom: 100%;
+    margin-bottom: -12px;
+}
+
+.hamburger::before {
+    bottom: 100%;
+    margin-bottom: 4px;
+}

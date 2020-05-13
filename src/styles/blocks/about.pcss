@@ -1,13 +1,38 @@
+.about-section {
+    background: #f8f6fb;
+
+    @include tablets() {
+        background: none;
+    }
+}
+
+
 .about {
     display: flex;
     min-height: 500px;
     margin: 0 auto;
     margin-top: 346px;
     max-width: 78%;
+
+    @include tablets() {
+        max-width: none;
+    }
+
+    @include phones() {
+        flex-direction: column;
+    }
 }
 
 .about__left {
     flex: 1;
+
+    @include tablets() {
+        width: 40%;
+    }
+
+    @include phones() {
+        width: 100%;
+    } 
 }
 
 .profile__info-one {
@@ -22,6 +47,14 @@
 
 .about__right {
     flex: 4;
+
+    @include tablets() {
+        width: 60%;
+    }
+
+    @include phones() {
+        width: 93%;
+    }  
 
     .about__disclamer {
     margin-bottom: 30px;
@@ -52,5 +85,9 @@
             fill: #db0200;
         }
     }
+}
+
+.user-info__content {
+    margin: 0 auto;
 }
 

@@ -7,9 +7,25 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Portfolio | main page
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
   body
     .wrapper
-      .background__top
+      section.background__tablets
+      section.parallax
+        .parallax__layer(data-speed="0.1")
+          img(src=require("images/parallax/1.png")).parallax__image
+        .parallax__layer(data-speed="0.13")
+          img(src=require("images/parallax/2.png")).parallax__image
+        .parallax__layer(data-speed="0.16")
+          img(src=require("images/parallax/3.png")).parallax__image
+        .parallax__layer(data-speed="0.2")
+          img(src=require("images/parallax/4.png")).parallax__image
+        .parallax__layer(data-speed="0.23")
+          img(src=require("images/parallax/5.png")).parallax__image
+        .parallax__layer(data-speed="0.25")
+          img(src=require("images/parallax/6.png")).parallax__image
+        .parallax__layer(data-speed="0.28")
+          img(src=require("images/parallax/7.png")).parallax__image
       .welcome-section
         section.hero
           .container
@@ -32,6 +48,8 @@ html(lang="ru")
                     li.socials__item
                       a(href="#").socials__link
                         +icon(item, "socials__icon")
+              a(href="#").hamburger_menu
+                .hamburger
             .hero__content
               .user-data
                 .user-data__desc Личный сайт веб разработчика
@@ -87,29 +105,8 @@ html(lang="ru")
                       h2.longtitle__txt Чем я могу быть полезен вам
                       .longtitle__desc
                         p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-                  .values-section__content
-                    -
-                      var items = [
-                        ["Front-end", ["HTML5", "CSS3", "Javascript", "Jquery и Vue.js"]],
-                        ["Workflow", ["GIT", "Terminal", "Gulp", "Webpack"]],
-                      ];
-
-                    ul.skills__list
-                      each row in items 
-                        li.skills-list__item.skills-row
-                          .skills-row__title #{row[0]}
-                          ul.skills-row__list
-                            each cell in row[1]
-                              li.skills-row__item
-                                .skill
-                                  svg(viewBox="0 0 200 200" preserveAspectRatio="none").skill__circle
-                                    defs.defs
-                                      linearGradient(x1="0%" y1="50%" x2="100%" y="100%")#skill__gradient
-                                        stop(offset="0%" stop-color="#7b00e9")
-                                        stop(offset="100%" stop-color="#4a00ed")
-                                    circle( r="67" cx="100" cy="100").skill__circle.skill__circle--under
-                                    circle( r="67" cx="100" cy="100" stroke="url(#skill__gradient)").skill__circle.skill__circle--above
-                                  .skill__title= cell
+                  #skills-component
+                  
         section.my__works
           .container
             h2.my__works__title Мои работы
@@ -186,7 +183,7 @@ html(lang="ru")
             form(action="#" autocomlete="on").form
               .first__line
                 .name__block
-                  .name__form Введите ваше имя
+                  .name__title Введите ваше имя
                   .user_block
                     +icon("user", "user_block-icon")
                     input(type="txt" onFocus="document.querySelector('.user_block-icon').classList.toggle('user_block-icon--active');" onFocusOut="document.querySelector('.user_block-icon').classList.toggle('user_block-icon--active');").input__txt 
@@ -199,7 +196,8 @@ html(lang="ru")
               .coment__block
                 +icon("message", "coment__block-icon")
                 textarea(name="" onFocus="document.querySelector('.coment__block-icon').classList.toggle('coment__block-icon--active');" onFocusOut="document.querySelector('.coment__block-icon').classList.toggle('coment__block-icon--active');").coment Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса
-              button(type="submit").send Отправить
+              .coment__block__send
+                button(type="submit").send Отправить
         section.footer
           footer.footer__block
             .left__footer
@@ -228,8 +226,23 @@ html(lang="ru")
                 .footer__info__three
                   p.part_one Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
                   p.part_two Martin Golding 
-      .background__bottom
+      section.parallax__bottom
+        .parallax__bottom__layer(data-speed="0.1")
+          img(src=require("images/parallax/bt1.png")).parallax__bottom__image
+        .parallax__bottom__layer(data-speed="0.13")
+          img(src=require("images/parallax/bt2.png")).parallax__bottom__image
+        .parallax__bottom__layer(data-speed="0.16")
+          img(src=require("images/parallax/bt3.png")).parallax__bottom__image
+        .parallax__bottom__layer(data-speed="0.20")
+          img(src=require("images/parallax/bt4.png")).parallax__bottom__image
+        .parallax__bottom__layer(data-speed="0.23")
+          img(src=require("images/parallax/bt5.png")).parallax__bottom__image
+        .parallax__bottom__layer(data-speed="0.26")
+          img(src=require("images/parallax/bt6.png")).parallax__bottom__image
+      section.background__bottom__tablets
+    include ./templates/entry.pug
+    script(src="main.js")
 
            
 
-              
+            
