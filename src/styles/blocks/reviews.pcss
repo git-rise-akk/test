@@ -1,13 +1,13 @@
 .reviews__container {
-    width: 80%;
+    width: 200%;
     display: flex;
 
     @include tablets() {
         width: 100%;
     } 
     
-    .reviews__one {
-        width: 50%; 
+    .reviews__content {
+        width: 100%; 
         margin-right: 43px;
 
         @include tablets() {
@@ -20,17 +20,6 @@
         }
     }
 
-    .reviews__two {
-        width: 50%;
-
-        @include tablets() {
-            width: 100%;
-        }
-
-        @include phones() {
-            display: none;
-        }
-    }
 }
 
 .reviews__info {
@@ -80,4 +69,13 @@
     @include phones() {
         display: none;
     }
+}
+
+.reviews__block {
+    display: flex;
+}
+
+.reviews__container-overflow {
+    width: 80%;
+    overflow: hidden;
 }

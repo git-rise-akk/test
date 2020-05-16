@@ -1,15 +1,19 @@
 script(type="text/x-template")#skills-list
     .values-section__content
         ul.skills__list
-            li.skills-list__item.skills-row
-                skills-row
+            li.skills-list__item.skills-row(v-for="category in skills" :key="category.title")
+                skills-row(
+                    :category="category"
+                )
                 
 
 script(type="text/x-template")#skills-row
-    .skills-row__title
+    .skills-row__title {{category.title}}
         ul.skills-row__list
-            li.skills-row__item
-                skill
+            li.skills-row__item(v-for="skill in category.skills" :key="skill.id")
+                skill(
+                    :skill="skill"
+                )
                 
 
 script(type="text/x-template")#skill
@@ -20,5 +24,5 @@ script(type="text/x-template")#skill
                 stop(offset="0%" stop-color="#7b00e9")
                 stop(offset="100%" stop-color="#4a00ed")
             circle( r="67" cx="100" cy="100").skill__circle.skill__circle--under
-            circle( r="67" cx="100" cy="100" stroke="url(#skill__gradient)").skill__circle.skill__circle--above
-        .skill__title
+            circle( r="67" cx="100" cy="100" ref="circle" stroke="url(#skill__gradient)" ).skill__circle.skill__circle--above
+        .skill__title {{skill.title}}   

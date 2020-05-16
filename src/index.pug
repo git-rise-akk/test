@@ -146,37 +146,8 @@ html(lang="ru")
               polygon(points="0, 0, 0, 100 1000, 100")
             svg(viewBox="0 0 1000 100" preserveAspectRatio="none").triangles__item.triangle.triangle__reviews
               polygon(points="1000, 0, 1000, 100 0,100")
-          .container
-            .reviews__title__container
-              h2.reviews__title Что обо мне говорят
-              .reviews__switch
-                a(href="#").reviews__switch-left
-                  +icon("arrow-down", "arrow__right") 
-                a(href="#").reviews__switch-right
-                  +icon("arrow-down", "arrow__left") 
-            .reviews__container
-              .quote__block
-                +icon("quote", "quote")
-              .reviews__one
-                .reviews__txt
-                  p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей! 
-                .reviews__info
-                  .avatar.avatar__reviews
-                        +image("content/user.jpg", "avatar__img")
-                  .reviews__user__info
-                    .reviews__name Ковальчук Дмитрий
-                    .reviews__position Основатель Loftschool
-              .quote__block
-                +icon("quote", "quote")
-              .reviews__two
-                .reviews__txt
-                  p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах 
-                .reviews__info
-                  .avatar.avatar__reviews
-                        +image("content/user.jpg", "avatar__img")
-                  .reviews__user__info
-                    .reviews__name Владимир Сабанцев
-                    .reviews__position Преподаватель
+          #reviews__component
+            
         section.feedback
           .container
             h2.feedback__title Связаться со мной
