@@ -7,7 +7,6 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Portfolio | main page
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
   body
     .wrapper
       section.background__tablets
@@ -143,9 +142,9 @@ html(lang="ru")
         section.reviews
           section.triangles.reviews__triangles
             svg(viewBox="0 0 1000 100" preserveAspectRatio="none").triangles__item.triangle.triangle__reviews
-              polygon(points="0, 0, 0, 100 1000, 100")
+              polygon(points="0, 50, 0, 100 1000, 100")
             svg(viewBox="0 0 1000 100" preserveAspectRatio="none").triangles__item.triangle.triangle__reviews
-              polygon(points="1000, 0, 1000, 100 0,100")
+              polygon(points="1000, 50, 1000, 100 0,100")
           #reviews__component
             
         section.feedback
@@ -212,7 +211,6 @@ html(lang="ru")
           img(src=require("images/parallax/bt6.png")).parallax__bottom__image
       section.background__bottom__tablets
     include ./templates/entry.pug
-    script(src="main.js")
 
            
 

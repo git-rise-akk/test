@@ -8,18 +8,17 @@ script(type="text/x-template")#reviews
                 button.reviews__switch-right(@click="next")
                     +icon("arrow-down", "arrow__left")
         flickity(ref="flickity" :options="flickityOptions").reviews__container-overflow
-            ul.reviews__container
-                li.reviews__block(v-for="comment in reviews" :key="comment.id")
-                    .quote__block
-                        +icon("quote", "quote")
-                    .reviews__content
-                        .reviews__txt
-                            p {{comment.txt}}
-                        .reviews__info
-                            .avatar.avatar__reviews
-                                +image("content/user.jpg", "avatar__img")
-                            .reviews__user__info
-                                .reviews__name {{comment.name}}
-                                .reviews__position {{comment.position}}
+            .reviews__block(v-for="comment in reviews" :key="comment.id")
+                .quote__block
+                    +icon("quote", "quote")
+                .reviews__content
+                    .reviews__txt
+                        p {{comment.txt}}
+                    .reviews__info
+                        .avatar.avatar__reviews
+                            +image("content/user.jpg", "avatar__img")
+                        .reviews__user__info
+                            .reviews__name {{comment.name}}
+                            .reviews__position {{comment.position}}
             
         
