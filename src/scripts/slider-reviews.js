@@ -32,10 +32,26 @@ new Vue({
     methods: {
         next() {
           this.$refs.flickity.next();
+          this.checkArrows();
         },
         
         previous() {
           this.$refs.flickity.previous();
+          this.checkArrows();
+        },
+
+        checkArrows() {
+            if (this.$refs.flickity.selectedIndex() == 0) {
+                this.$el.querySelector(".reviews__switch-left").disabled = true;
+            } else {
+                this.$el.querySelector(".reviews__switch-left").disabled = false;
+            }
+            
+            if (this.$refs.flickity.selectedIndex() == this.$refs.flickity.slides().length -1) {
+                this.$el.querySelector(".reviews__switch-right").disabled = true;
+            } else {  
+                this.$el.querySelector(".reviews__switch-right").disabled = false;
+            }
         }
     }
 }); 

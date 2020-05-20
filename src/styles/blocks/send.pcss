@@ -7,8 +7,12 @@
         font-size: 18px;
         color: #ffffff;
         font-weight: bold;
-        background-image: linear-gradient(to right, #7b00e9, #4a00ed);
+        background-image: linear-gradient(to right, #ad00ed 0%, #5500f2 100%);
         border-radius: 50px 0px 50px 0px;
+
+        &:hover {
+         background-image: linear-gradient(to right, #bb00ff 0%, #5900ff 100%);
+        }
 
         @include phones() {
             padding: 24px 82px;

@@ -19,23 +19,41 @@
     align-items: center;
     justify-content: center;
     background: transparent;
+    
 
     &:last-child {
         margin-right: 0px;
+    }
+
+    &:disabled {
+        border: 1px solid #545f72;
+        opacity: 0.5;
     }
 
     &:hover {
         @include hover;
     }
 
-    &:hover .arrow__left {
+    &:hover .arrow__left  {
         fill: #fff;
     }
 
     &:hover .arrow__right {
         fill: #fff;
     }
+
+    &:disabled .arrow__left {
+        fill: #545f72;
+        opacity: 0.5;
+    }
+
+    &:disabled .arrow__right {
+        fill: #545f72;
+        opacity: 0.5;
+    }
+
 }
+ 
 
 .arrow__right {
     width: 8px;

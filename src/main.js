@@ -7,3 +7,4 @@ import "./scripts/skills";
 import "./scripts/parallax";
 import "./scripts/slider-works";
 import "./scripts/slider-reviews";
+import "./scripts/menu-phones";

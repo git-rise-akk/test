@@ -1,0 +1,45 @@
+.menu__phone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background: #fff;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: .3s;
+
+    @include tablets-600() {
+        width: 50%;
+    }
+
+    @include phones() {
+        width: 100%;
+    }
+
+    .menu__phone__container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 37px;
+    }
+}
+
+.menu__list--phone {
+    flex-direction: column;
+
+    &:last-child {
+        margin-bottom: 63px;
+    }
+}
+
+.menu__phone-cross {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 45px;
+    margin-top: 45px;
+}
+
+.header__links--phone {
+    display: block;
+}

@@ -3,9 +3,9 @@ script(type="text/x-template")#reviews
         .reviews__title__container
             h2.reviews__title Что обо мне говорят
             .reviews__switch
-                button.reviews__switch-left(@click="previous")
+                button.reviews__switch-left(@click="previous" :disabled="true")
                     +icon("arrow-down", "arrow__right") 
-                button.reviews__switch-right(@click="next")
+                button.reviews__switch-right(@click="next" :disabled="false")
                     +icon("arrow-down", "arrow__left")
         flickity(ref="flickity" :options="flickityOptions").reviews__container-overflow
             .reviews__block(v-for="comment in reviews" :key="comment.id")

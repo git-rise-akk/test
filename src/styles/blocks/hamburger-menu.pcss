@@ -1,15 +1,26 @@
-.hamburger {
-    width: 24px;
-    height: 4px;
-    background: #414c63;
+.hamburger__menu {
     position: relative;
-    display: none;
+    padding: 0;
+    border: none;
+    width: 25px;
+    height: 25px;
+    background: transparent;
     margin-left: 93px;
+    display: none;
 
     @include tablets {
         display: flex;
     }
+}
 
+.hamburger {
+    width: 24px;
+    height: 4px;
+    background: #414c63;
+    position: absolute;
+    top: 10px;
+    left: 1px;
+    
     &::before {
         content: "";
         display: block;
