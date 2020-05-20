@@ -1,5 +1,5 @@
 script(type="text/x-template")#reviews
-    .container
+    .container(@click="checkArrows();" @touchend="checkArrows();")
         .reviews__title__container
             h2.reviews__title Что обо мне говорят
             .reviews__switch

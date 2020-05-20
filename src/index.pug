@@ -127,36 +127,7 @@ html(lang="ru")
         section.my__works
           .container
             h2.my__works__title Мои работы
-            .my__works__container
-              .my__works-left
-                h1.number__covers 3
-                .container__covers
-                  .big__cover
-                    +image("content/big__cover.png" , "big-cover__img")
-                    .little__covers
-                      -var covers = [ ["content/cover.png", "" ], ["content/cover2.png", "" ], ["content/cover4.png", "cover__img--active"] ];
-                      ul.little__covers-list  
-                        each cover in covers
-                          li.little__cover
-                            a(href="#").link__site
-                              +image(cover[0], "cover__img", cover[1])
-                    .switch
-                      button.switch__down
-                        +icon("arrow-down", "arrow__top")
-                      button.switch__up
-                        +icon("arrow-down", "arrow__bottom")
-              .my__works-right
-                .technologies 
-                  -var features = ["HTML", "CSS", "javascript"];
-                  ul.technologies__list
-                    each item in features 
-                      li.features__block
-                        .features__txt #{item}
-                h2.site__title Сайт школы образования 
-                p.site__content Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                a(href="#").link__site
-                  +icon("link", "link")
-                  p.look Посмотреть сайт
+            #slider-component
         section.reviews
           section.triangles.reviews__triangles
             svg(viewBox="0 0 1000 100" preserveAspectRatio="none").triangles__item.triangle.triangle__reviews
@@ -217,7 +188,7 @@ html(lang="ru")
       section.parallax__bottom
         .parallax__bottom__layer(data-speed="0.1")
           img(src=require("images/parallax/bt1.png")).parallax__bottom__image
-        .parallax__bottom__layer(data-speed="0.12")
+        .parallax__bottom__layer(data-speed="0")
           img(src=require("images/parallax/bt2.png")).parallax__bottom__image
         .parallax__bottom__layer(data-speed="0.2")
           img(src=require("images/parallax/bt3.png")).parallax__bottom__image
@@ -225,7 +196,7 @@ html(lang="ru")
           img(src=require("images/parallax/bt4.png")).parallax__bottom__image
         .parallax__bottom__layer(data-speed="0.13")
           img(src=require("images/parallax/bt5.png")).parallax__bottom__image
-        .parallax__bottom__layer(data-speed="0.1")
+        .parallax__bottom__layer(data-speed="0")
           img(src=require("images/parallax/bt6.png")).parallax__bottom__image
       section.background__bottom__tablets
     include ./templates/entry.pug
