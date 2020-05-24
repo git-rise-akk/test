@@ -12,7 +12,7 @@ const thumbs = {
 const display = {
     template: "#slider-display",
     components: {thumbs, btns},
-    props: ["currentWork", "works"],
+    props: ["currentWork", "works", "currentIndex"],
     computed: {
         reversedWorks() {
             const works = [...this.works];

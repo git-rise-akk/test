@@ -5,6 +5,7 @@ li {
 .my__works {
     position:relative;
     margin-top: 176px;
+    padding-bottom: 30px;
 
     @include tablets() {
         margin-top: 400px;
@@ -65,6 +66,23 @@ li {
 .big__cover {
     position: relative;
     max-width: 623px;  
+
+    &:before {
+        content: attr(data-slide);
+        position: absolute;
+        transform: translateY(-16%);
+        line-height: 1;
+        left: 93%;
+        font-size: 300px;
+        color: #e6e6e6;
+        font-weight: bold;
+        z-index: -1;
+
+        @include tablets-600 {
+            display: none;
+        }
+
+    }
 }
 
 .little__covers  {
@@ -119,23 +137,6 @@ li {
 
 .container__covers {
     position: relative;
-}
-
-.number__covers {
-    position: absolute;
-    top: -110px;
-    right: -140px;
-    font-size: 300px;
-    color: #e6e6e6;
-    font-weight: bold;
-
-    @include desktop() {
-        right: 67px;
-    }
-
-    @include phones() {
-        display: none;
-    }
 }
 
 .cover__img {  

@@ -12,9 +12,8 @@ script(type="text/x-template")#slider-container
 
 script(type="text/x-template")#slider-display
     .my__works-left
-        h1.number__covers {{currentIndex}}
         .container__covers
-            .big__cover
+            .big__cover(:data-slide="currentIndex + 1")
                 img(:src="currentWork.photo").big-cover__img
                 thumbs(
                     :works="reversedWorks"
