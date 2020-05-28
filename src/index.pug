@@ -137,27 +137,7 @@ html(lang="ru")
             svg(viewBox="0 0 1000 100" preserveAspectRatio="none").triangles__item.triangle.triangle__reviews
               polygon(points="1000, 50, 1000, 100 0,100")
           #reviews__component   
-        section.feedback
-          .container
-            h2.feedback__title Связаться со мной
-            form(action="#" autocomlete="on").form
-              .first__line
-                .name__block
-                  .name__title Введите ваше имя
-                  .user_block
-                    +icon("user", "user_block-icon")
-                    input(type="txt" placeholder="Ковальчук Дмитрий" onFocus="document.querySelector('.user_block-icon').classList.toggle('user_block-icon--active');" onFocusOut="document.querySelector('.user_block-icon').classList.toggle('user_block-icon--active');").input__txt 
-                .email__block
-                  .email__block__title Введите ваш email
-                  .email__container
-                    +icon("envelope", "email__container-icon")
-                    input(type="email" placeholder="loftschool@study.com" onFocus="document.querySelector('.email__container-icon').classList.toggle('email__container-icon--active');" onFocusOut="document.querySelector('.email__container-icon').classList.toggle('email__container-icon--active');").input__email
-              .coment__block__title Сообщение к письму
-              .coment__block
-                +icon("message", "coment__block-icon")
-                textarea(name="" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" onFocus="document.querySelector('.coment__block-icon').classList.toggle('coment__block-icon--active');" onFocusOut="document.querySelector('.coment__block-icon').classList.toggle('coment__block-icon--active');").coment
-              .coment__block__send
-                button(type="submit").send Отправить
+        #form__component
         section.background__bottom__tablets
         section.parallax__bottom
           .parallax__bottom__layer(data-speed="0")

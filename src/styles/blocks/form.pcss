@@ -1,3 +1,7 @@
+.feedback {
+    position: relative;
+}
+
 .form {
     padding-bottom: 166px;
     width: 60%;
@@ -21,6 +25,7 @@
 
         .user_block {
             display: flex;
+            position: relative;
 
             &:hover .input__txt {
                 outline: none;
@@ -33,6 +38,7 @@
         .name__title {
             margin-bottom: 22px;
             opacity: 0.3;
+            white-space: nowrap; 
 
             @include phones() {
                 text-align: center;
@@ -57,11 +63,13 @@
 
     .email__container {
         display: flex;
+        position: relative;
     }
 
     .email__block__title {
         margin-bottom: 22px;
-        opacity: 0.3; 
+        opacity: 0.3;
+        white-space: nowrap; 
 
         @include phones() {
             text-align: center;
@@ -182,5 +190,81 @@
         transition: 0.3s;
     }
 }
+
+.contact__tooltip {
+    position: absolute;
+    bottom: -40px;
+    height: 40px;
+    width: max-content;
+    left: 10px;
+    background-color: #cd1515;
+    padding: 10px 20px;
+    color: #fff;
+    display: none;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        right: 100px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #cd1515 transparent;
+    }
+}
+
+.name__block.error {
+    
+    .contact__tooltip {
+        display: block;
+    }
+
+    .input__txt {
+        border-bottom: 1px solid red;
+    }
+
+    .user_block-icon {
+        fill: red;
+        opacity: 1;
+    }
+}
+
+.email__block.error {
+
+    .contact__tooltip {
+        display: block;
+    }
+
+    .input__email {
+        border-bottom: 1px solid #cd1515;
+        
+    }
+
+    .email__container-icon {
+        fill: red;
+        opacity: 1;
+    }
+}   
+
+.coment__block.error {
+
+    .contact__tooltip {
+        display: block;
+    }
+
+    .coment {
+        border-bottom: 1px solid red;
+    }
+
+    .coment__block-icon {
+        fill: red;
+        opacity: 1;
+    }
+}   
+
+
+
 
 

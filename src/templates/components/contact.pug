@@ -1,0 +1,29 @@
+script(type="text/x-template")#form
+    section.feedback
+        .container
+            h2.feedback__title Связаться со мной
+            form(autocomlete="on" @submit.prevent="submitForm").form
+                .first__line
+                    .name__block(:class="{error: !nameValid}")
+                        .name__title Введите ваше имя
+                        .user_block
+                            +icon("user", "user_block-icon")
+                            input(type="txt" name="name" @input="validateName"  placeholder="Ковальчук Дмитрий" onFocus="document.querySelector('.user_block-icon').classList.toggle('user_block-icon--active');" onFocusOut="document.querySelector('.user_block-icon').classList.toggle('user_block-icon--active');").input__txt
+                            .contact__tooltip {{nameError}} 
+                    .email__block(:class="{error: !emailValid}")
+                        .email__block__title Введите ваш email
+                        .email__container
+                            +icon("envelope", "email__container-icon")
+                            input(type="email" name="email" @input="validateEmail" placeholder="loftschool@study.com" onFocus="document.querySelector('.email__container-icon').classList.toggle('email__container-icon--active');" onFocusOut="document.querySelector('.email__container-icon').classList.toggle('email__container-icon--active');").input__email
+                            .contact__tooltip {{emailError}} 
+                .coment__block__title Сообщение к письму
+                .coment__block(:class="{error: !messageValid}")
+                    +icon("message", "coment__block-icon")
+                    textarea(name="message" @input="validateMessage" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" onFocus="document.querySelector('.coment__block-icon').classList.toggle('coment__block-icon--active');" onFocusOut="document.querySelector('.coment__block-icon').classList.toggle('coment__block-icon--active');").coment
+                    .contact__tooltip {{messageError}}
+                .coment__block__send
+                    button(@click.prevent="submitForm").send Отправить
+        .overlay(:class="{disabled: overlayHidden}" @click="hideOverlay")
+            .overlay__content
+                .overlay__message {{resultMessage}}    
+                button.overlay__close(@click="hideOverlay") Закрыть
