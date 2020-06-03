@@ -88,8 +88,8 @@ new Vue({
             });
         },
         setWork(index) {
-            this.currentIndex = index
-
+            const a = this.works.length - index - 1
+            this.currentIndex = a
         }, 
         
     },

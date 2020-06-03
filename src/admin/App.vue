@@ -1,7 +1,7 @@
 <template lang="pug">
   .wrapper
     section.authorization
-      .authorization__background
+      form.authorization__background
         .authorization__container
           .authorization__block
             h2.authorization__block-title Авторизация
@@ -15,7 +15,7 @@
               .authorization__block-password__container
                 .authorization-icon.authorization-icon--password
                 input(type="password" onFocus="document.querySelector('.authorization-icon--password').classList.toggle('authorization-icon--password--active');" onFocusOut="document.querySelector('.authorization-icon--password').classList.toggle('authorization-icon--password--active');").input__password
-            button.send Отправить
+            input(type="submit").send
     .admin__pages
       header.header
         .header__container
@@ -438,6 +438,8 @@
     background-image: linear-gradient(to right, #ad00ed 0%, #5500f2 100%);
     border-radius: 50px 0px 50px 0px;
     margin: 0 auto;
+    border: none;
+    cursor: pointer;
 
     &:hover {
       background-image: linear-gradient(to right, #bb00ff 0%, #5900ff 100%);
