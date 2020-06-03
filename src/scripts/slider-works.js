@@ -6,13 +6,14 @@ const btns = {
 
 const thumbs = {
     template: "#slider-thumbs",
-    props: ["works", "currentWork"],
+    props: ["works", "currentWork", "currentIndex", "setWork"],
+    
 };
 
 const display = {
     template: "#slider-display",
     components: {thumbs, btns},
-    props: ["currentWork", "works", "currentIndex"],
+    props: ["currentWork", "works", "currentIndex", "setWork"],
     computed: {
         reversedWorks() {
             const works = [...this.works];
@@ -46,12 +47,14 @@ new Vue({
         return {
             works: [],
             currentIndex: 0,
+           
         };   
     },
 
     computed: {
         currentWork() {
-            return this.works[this.currentIndex]
+            return this.works[this.currentIndex];
+            
         },
     },
     watch: {
@@ -84,11 +87,15 @@ new Vue({
                 return item;
             });
         },
+        setWork(index) {
+            this.currentIndex = index
+
+        }, 
+        
     },
 
     created() {
         const data = require("../data/works.json");
         this.works = this.makeArrWithRequireImages(data);
-        this.currentWork = this.works[this.currentIndex];
     }
 });

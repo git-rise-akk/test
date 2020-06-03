@@ -354,6 +354,23 @@
 
   .authorization__block-login, .authorization__block-password {
     margin-bottom: 40px;
+
+  }
+
+  .authorization__block-login {
+    &:hover .authorization-icon {
+      background: svg-load("user.svg", fill="#4a00ed") center center / contain no-repeat;
+      opacity: 1;
+      transition: 0.3s;
+    }
+  }
+
+  .authorization__block-password {
+    &:hover .authorization-icon--password {
+      background: svg-load("key.svg", fill="#4a00ed") center center / contain no-repeat;
+      opacity: 1;
+      transition: 0.3s;
+    } 
   }
 
   .input__txt, .input__password {
@@ -418,9 +435,13 @@
     font-size: 18px;
     color: #ffffff;
     font-weight: bold;
-    background-image: linear-gradient(to right, #7b00e9, #4a00ed);
+    background-image: linear-gradient(to right, #ad00ed 0%, #5500f2 100%);
     border-radius: 50px 0px 50px 0px;
     margin: 0 auto;
+
+    &:hover {
+      background-image: linear-gradient(to right, #bb00ff 0%, #5900ff 100%);
+    }
 
     @include phones() {
       padding: 24px 82px;
@@ -486,7 +507,10 @@
       opacity: 0.5;
       margin-left: auto;
       text-decoration: underline;
-;
+
+      &:hover {
+        opacity: 1;
+      }
 
       @include phones() {
         margin: 0;
@@ -564,7 +588,10 @@
           background: transparent;
           color: #383bcf;
           font-size: 16px;
-          font-family: "Open Sans - Semibold";
+
+          &:hover {
+            color: #5500f2;
+          }  
         }
       }
     }
@@ -662,7 +689,11 @@
       height: 21px;
       border-radius: 50%;
       background: #383bcf;
-      position: relative;  
+      position: relative;
+
+      &:hover {
+        background: #5500f2;
+      }  
 
       &:before {
         content: "";
@@ -707,6 +738,11 @@
       height: 15px;
       padding: 0;
       background: svg-load("tick.svg", fill="#00d70a") center center no-repeat;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     .skills__block-cross {
@@ -714,14 +750,29 @@
       height: 15px;
       padding: 0;
       background: svg-load("cross.svg", fill="#bf2929") center center no-repeat;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     .skills__block-pen {
       background: svg-load("pencil.svg", fill="$text-color")  center center / contain no-repeat;
-    }
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
+    } 
 
     .skills__block-delete {
       background: svg-load("trash.svg", fill="$text-color")  center center / contain no-repeat;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     .skill__input {
@@ -896,6 +947,10 @@
       text-transform: uppercase;
       cursor: pointer;
       padding: 15px 45px;  
+
+      &:hover {
+        background-image: linear-gradient(to right, #006aed 50%, #3f35cb 100%);
+      }
     }
 
     .name-site__input, .link-site__input, .tags__input  {
@@ -1007,6 +1062,10 @@
 
       .site__link {
         color: #383bcf;
+
+        &:hover {
+          color: #ad00ed;
+        }
       }
 
       
@@ -1114,6 +1173,10 @@
         margin-top: 27px;
         padding: 0;
         cursor: pointer;
+
+        &:hover {
+          color: #ad00ed;
+        }
       }
     }
 
@@ -1184,6 +1247,10 @@
       color: rgba(0, 0, 0, 0.5);
       padding: 0 27px 0 0;
 
+      &:hover {
+        color: rgba(0, 0, 0, 1);
+      }
+
       &:after {
         content: "";
         position: absolute;
@@ -1192,6 +1259,11 @@
         top: 1px;
         right: 5px;
         background: svg-load('pencil.svg', fill=$links-color, width=100%, height=100%) center;
+        opacity: 0.7;
+      }
+
+      &:hover::after {
+        opacity: 1;
       }
     }
 
@@ -1202,6 +1274,10 @@
       color: rgba(0, 0, 0, 0.5);
       padding: 0 27px 0 0;
 
+      &:hover {
+        color: rgba(0, 0, 0, 1);
+      }
+
       &:after {
         content: "";
         position: absolute;
@@ -1210,6 +1286,11 @@
         top: 1px;
         right: 5px;
         background: svg-load("cross.svg", fill="red") center center no-repeat;
+        opacity: 0.7;
+      }
+
+      &:hover::after {
+        opacity: 1;
       }
     }
   }
@@ -1230,6 +1311,10 @@
       padding: 24px 40px;
       border-radius: 30px;
       margin-left: 59px;
+
+      &:hover {
+        background-image: linear-gradient(to right, #006aed 50%, #3f35cb 100%);
+      }
     }
 
     .input__cancel {
@@ -1238,6 +1323,10 @@
       font-size: 16px;
       color: #383bcf;
       cursor: pointer;
+
+      &:hover {
+        color: #ad00ed;
+      }
     }
   }
 

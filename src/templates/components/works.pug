@@ -5,6 +5,7 @@ script(type="text/x-template")#slider-container
             :works="works"
             :currentIndex="currentIndex"
             @slide="handleSlide"
+            :setWork="setWork"
         )
         info(
             :currentWork = "currentWork"
@@ -18,6 +19,8 @@ script(type="text/x-template")#slider-display
                 thumbs(
                     :works="reversedWorks"
                     :currentWork="currentWork"
+                    :setWork="setWork"
+                    :currentIndex="currentIndex"
                 )
                 btns(
                     @slide="$emit('slide', $event)"
@@ -27,12 +30,12 @@ script(type="text/x-template")#slider-thumbs
     .little__covers
         ul.little__covers-list  
                 li.little__cover(
-                    v-for="work in works" 
+                    v-for="(work, index) in works" 
                     :key="work.id"
-                    :class="{little__cover__active: currentWork.id === work.id}"
+                    :class="{little__cover__active: currentWork.id === work.id}" 
                 )
-                    a(:href="currentWork.link").link__site
-                        img(:src="work.photo").cover__img.cover__img--active
+                    button(@click="setWork(index)").link__site
+                        img(:src="work.photo").cover__img
 
 script(type="text/x-template")#slider-btns
     .switch
