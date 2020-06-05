@@ -277,7 +277,8 @@
 
 </template>
 
-<script></script>
+<script>
+</script>
 
 <style lang="postcss">
   @import "../styles/mixins.pcss";

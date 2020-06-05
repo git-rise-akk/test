@@ -19,11 +19,19 @@ html(lang="ru")
             .menu__phone__container
               .menu__phone__container__block
                 nav.menu
-                    - var items = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-                    ul.menu__list.menu__list--phone
-                      each item in items 
-                        li.menu__item
-                          a.menu__link #{item}
+                  ul.menu__list.menu__list--phone
+                    li.menu__item
+                      button.menu__link.menu__link--home Главная
+                    li.menu__item
+                      button.menu__link.menu__link--about__my Обо мне
+                    li.menu__item
+                      button.menu__link.menu__link--skills__nav Навыки
+                    li.menu__item
+                      button.menu__link.menu__link--works__nav Работы 
+                    li.menu__item
+                      button.menu__link.menu__link--reviews__nav Отзывы
+                    li.menu__item
+                      button.menu__link.menu__link--contact__nav Связаться
                 .header__links.header__links--phone
                   - var icons = ["insta", "vk", "github"];
                   ul.socials
@@ -53,19 +61,32 @@ html(lang="ru")
                 h1.logo AT
               .header__btns
                 nav.menu
-                  - var items = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
                   ul.menu__list
-                    each item in items 
-                      li.menu__item
-                        a.menu__link #{item}
+                    li.menu__item
+                      button.menu__link.menu__link--home-desc Главная
+                        .line__header
+                    li.menu__item
+                      button.menu__link.menu__link--about__my-desc Обо мне
+                        .line__header
+                    li.menu__item
+                      button.menu__link.menu__link--skills__nav-desc Навыки
+                        .line__header
+                    li.menu__item
+                      button.menu__link.menu__link--works__nav-desc Работы
+                        .line__header 
+                    li.menu__item
+                      button.menu__link.menu__link--reviews__nav-desc Отзывы
+                        .line__header
+                    li.menu__item
+                      button.menu__link.menu__link--contact__nav-desc Связаться
                         .line__header
               .header__links
-                - var icons = ["insta", "vk", "github"];
+                - var icons = [["insta", "https://www.instagram.com/aleksandr._.tkachev/?hl=ru"], ["vk", "https://vk.com/skalolaz97"], ["github", "https://github.com/git-rise-akk"]];
                 ul.socials
                   each item in icons
                     li.socials__item
-                      a(href="#").socials__link
-                        +icon(item, "socials__icon")
+                      a(href=`#${item[1]}`).socials__link
+                        +icon(item[0], "socials__icon")
               button.hamburger__menu
                 .hamburger
             .hero__content
@@ -73,7 +94,7 @@ html(lang="ru")
                 .user-data__desc Личный сайт веб разработчика
                 h1.user-data__name Ткачёв Александр
             
-            a(href="#").hero__bottom-btn 
+            button.hero__bottom-btn 
               .scroll-down-btn Скролл
               +icon("scroll", "scroll__icons")
 
@@ -161,11 +182,19 @@ html(lang="ru")
               .footer__info__one Личный сайт веб-разработчика
           .right__footer
             nav.menu.menu__footer
-              - var items = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
               ul.menu__list
-                each item in items 
-                  li.menu__item
-                    a.menu__link #{item}
+                li.menu__item
+                  button.menu__link.menu__link--home-footer Главная
+                li.menu__item
+                  button.menu__link.menu__link--about__my-footer Обо мне
+                li.menu__item
+                  button.menu__link.menu__link--skills__nav-footer Навыки
+                li.menu__item
+                  button.menu__link.menu__link--works__nav-footer Работы 
+                li.menu__item
+                  button.menu__link.menu__link--reviews__nav-footer Отзывы
+                li.menu__item
+                  button.menu__link.menu__link--contact__nav-footer Связаться
             .footer__info
               .footer__info__two 
                 .footer__txt 

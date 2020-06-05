@@ -9,3 +9,6 @@ import "./scripts/slider-works";
 import "./scripts/slider-reviews";
 import "./scripts/menu-phones";
 import "./scripts/contact";
+import "./scripts/scroll-btn";
+import "./scripts/navigation";
+import "./scripts/nav-footer";
