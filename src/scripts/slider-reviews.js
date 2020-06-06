@@ -26,7 +26,7 @@ new Vue({
     },
     created() {
         const data = require("../data/reviews.json");
-        this.reviews = data;  
+        this.reviews = this.makeArrWithRequireImages(data);  
     },
 
     methods: {
@@ -52,7 +52,15 @@ new Vue({
             } else {  
                 this.$el.querySelector(".reviews__switch-right").disabled = false;
             }
-        }
+        },
+        makeArrWithRequireImages(array) {
+            return array.map(item => {
+                const requirePic = require(`../images/content/${item.photo}`);
+                item.photo = requirePic;
+
+                return item;
+            });
+        },
     }
 }); 
 

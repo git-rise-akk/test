@@ -33,12 +33,12 @@ html(lang="ru")
                     li.menu__item
                       button.menu__link.menu__link--contact__nav Связаться
                 .header__links.header__links--phone
-                  - var icons = ["insta", "vk", "github"];
+                  - var icons = [["insta", "https://www.instagram.com/aleksandr._.tkachev/?hl=ru"], ["vk", "https://vk.com/skalolaz97"], ["github", "https://github.com/git-rise-akk"]];
                   ul.socials
                     each item in icons
                       li.socials__item
-                        a(href="#").socials__link
-                          +icon(item, "socials__icon")
+                        a(href=`${item[1]}`).socials__link
+                          +icon(item[0], "socials__icon")
         section.parallax
           .parallax__layer(data-speed="0")
             img(src=require("images/parallax/1.png")).parallax__image
@@ -85,7 +85,7 @@ html(lang="ru")
                 ul.socials
                   each item in icons
                     li.socials__item
-                      a(href=`#${item[1]}`).socials__link
+                      a(href=`${item[1]}`).socials__link
                         +icon(item[0], "socials__icon")
               button.hamburger__menu
                 .hamburger
@@ -143,7 +143,7 @@ html(lang="ru")
                   .longtitle
                     h2.longtitle__txt Чем я могу быть полезен вам
                     .longtitle__desc
-                      p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                      p Обладаю следующими навыками: HTML5, CSS, SASS, Pug, BEM, Flexbox, SVG, Photoshop, Avacode, Corel Draw, немного знаком с Git, Java Script, JQery, Vue.js, Gulp, Webpack. 
                 #skills-component         
       section.my__works
         .container
@@ -200,12 +200,12 @@ html(lang="ru")
                 .footer__txt 
                   p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool 
                 .footer__links
-                  - var icons = ["insta", "vk", "github"];
+                  - var icons = [["insta", "https://www.instagram.com/aleksandr._.tkachev/?hl=ru"], ["vk", "https://vk.com/skalolaz97"], ["github", "https://github.com/git-rise-akk"]];
                   ul.socials
                     each item in icons
                       li.socials__item
-                        a(href="#").socials__link.socials__link__footer
-                          +icon(item, "socials__icon")
+                        a(href=`${item[1]}`).socials__link.socials__link__footer
+                          +icon(item[0], "socials__icon")
               .footer__info__three
                 p.part_one Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
                 p.part_two Martin Golding 

@@ -16,7 +16,7 @@ script(type="text/x-template")#reviews
                         p {{comment.txt}}
                     .reviews__info
                         .avatar.avatar__reviews
-                            +image("content/user.jpg", "avatar__img")
+                            img(:src="comment.photo",).avatar__img
                         .reviews__user__info
                             .reviews__name {{comment.name}}
                             .reviews__position {{comment.position}}

@@ -5,22 +5,22 @@
         {
           "id": 1,
           "title": "HTML5",
-          "percent": 100
+          "percent": 75
         },
         {
           "id": 2,
           "title": "CSS3",
-          "percent": 60
+          "percent": 75
         },
         {
             "id": 3,
             "title": "Javascript",
-            "percent": 50
+            "percent": 30
         },
         {
           "id": 4,
           "title": "Jquery и Vue.js",
-          "percent": 80
+          "percent": 20
         }
       ]
     },
@@ -35,17 +35,17 @@
         {
           "id": 6,
           "title": "Terminal",
-          "percent": 60
+          "percent": 40
         },
         {
           "id": 7,
           "title": "Gulp",
-          "percent": 45
+          "percent": 20
         },
         {
           "id": 8,
           "title": "Webpack",
-          "percent": 70
+          "percent": 20
         }
       ]
     }
