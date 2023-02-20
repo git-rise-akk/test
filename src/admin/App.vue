@@ -1,5 +1,6 @@
 <template lang="pug">
   .wrapper
+    router-view
     section.authorization
       form.authorization__background
         .authorization__container
@@ -26,7 +27,7 @@
             .header__container-title Панель администрирования
             a(href="#").exit Выйти
       .navigation__container
-        nav.menu 
+        nav.menu
           -var items = ["Обо мне", "Работы", "Отзывы"]
           ul.menu__list
             each item in items
@@ -45,10 +46,10 @@
               .skills__block-title
                 input(type="txt" placeholder="Название новой группы").skills__block-title__input
                 .skills__block-editing
-                  button.skills__block-check 
+                  button.skills__block-check
                   button.skills__block-cross
-                  button.skills__block-pen 
-                  button.skills__block-delete 
+                  button.skills__block-pen
+                  button.skills__block-delete
               .skills__block-middle
               .skills__block-new
                 input(tapy="txt" placeholder="Новый навык").skills__block-new__input
@@ -59,10 +60,10 @@
               .skills__block-title
                 input(type="txt" placeholder="Workflow").skills__block-title__input
                 .skills__block-editing
-                  button.skills__block-check 
-                  button.skills__block-cross 
-                  button.skills__block-pen 
-                  button.skills__block-delete 
+                  button.skills__block-check
+                  button.skills__block-cross
+                  button.skills__block-pen
+                  button.skills__block-delete
               .skills__block-middle
                 ul.skills__block__list
                   li.skill__block
@@ -70,37 +71,37 @@
                     .interest__input-block
                       input(type="number" min="0" max="100" step="10" placeholder="100").interest__input
                     .skills__block-editing
-                      button.skills__block-check 
-                      button.skills__block-cross 
-                      button.skills__block-pen 
-                      button.skills__block-delete 
+                      button.skills__block-check
+                      button.skills__block-cross
+                      button.skills__block-pen
+                      button.skills__block-delete
                   li.skill__block
                     input(type="txt" placeholder="HTML" ).skill__input
                     .interest__input-block
                       input(type="number" min="0" max="100" step="10" placeholder="100").interest__input
                     .skills__block-editing
-                      button.skills__block-check 
-                      button.skills__block-cross 
-                      button.skills__block-pen 
-                      button.skills__block-delete 
+                      button.skills__block-check
+                      button.skills__block-cross
+                      button.skills__block-pen
+                      button.skills__block-delete
                   li.skill__block
                     input(type="txt" placeholder="HTML" ).skill__input
                     .interest__input-block
                       input(type="number" min="0" max="100" step="10" placeholder="100").interest__input
                     .skills__block-editing
-                      button.skills__block-check 
-                      button.skills__block-cross 
-                      button.skills__block-pen 
-                      button.skills__block-delete 
+                      button.skills__block-check
+                      button.skills__block-cross
+                      button.skills__block-pen
+                      button.skills__block-delete
                   li.skill__block
                     input(type="txt" placeholder="HTML" ).skill__input
                     .interest__input-block
                       input(type="number" min="0" max="100" step="10" placeholder="100").interest__input
                     .skills__block-editing
-                      button.skills__block-check 
-                      button.skills__block-cross 
-                      button.skills__block-pen 
-                      button.skills__block-delete 
+                      button.skills__block-check
+                      button.skills__block-cross
+                      button.skills__block-pen
+                      button.skills__block-delete
               .skills__block-new
                 input(type="txt" placeholder="Новый навык").skills__block-new__input
                 .interest__input-block
@@ -110,10 +111,10 @@
               .skills__block-title
                 input(type="txt" placeholder="Frontend").skills__block-title__input
                 .skills__block-editing
-                  button.skills__block-check 
-                  button.skills__block-cross 
-                  button.skills__block-pen 
-                  button.skills__block-delete 
+                  button.skills__block-check
+                  button.skills__block-cross
+                  button.skills__block-pen
+                  button.skills__block-delete
               .skills__block-middle
                 ul.skills__block__list
                   li.skill__block
@@ -121,37 +122,37 @@
                     .interest__input-block
                       input(type="number" min="0" max="100" step="10" placeholder="100").interest__input
                     .skills__block-editing
-                      button.skills__block-check 
-                      button.skills__block-cross 
-                      button.skills__block-pen 
-                      button.skills__block-delete 
+                      button.skills__block-check
+                      button.skills__block-cross
+                      button.skills__block-pen
+                      button.skills__block-delete
                   li.skill__block
                     input(type="txt" placeholder="HTML" ).skill__input
                     .interest__input-block
                       input(type="number" min="0" max="100" step="10" placeholder="100").interest__input
                     .skills__block-editing
-                      button.skills__block-check 
-                      button.skills__block-cross 
-                      button.skills__block-pen 
-                      button.skills__block-delete 
+                      button.skills__block-check
+                      button.skills__block-cross
+                      button.skills__block-pen
+                      button.skills__block-delete
                   li.skill__block
                     input(type="txt" placeholder="HTML" ).skill__input
                     .interest__input-block
                       input(type="number" min="0" max="100" step="10" placeholder="100").interest__input
                     .skills__block-editing
-                      button.skills__block-check 
-                      button.skills__block-cross 
-                      button.skills__block-pen 
-                      button.skills__block-delete 
+                      button.skills__block-check
+                      button.skills__block-cross
+                      button.skills__block-pen
+                      button.skills__block-delete
                   li.skill__block
                     input(type="txt" placeholder="HTML" ).skill__input
                     .interest__input-block
                       input(type="number" min="0" max="100" step="10" placeholder="100").interest__input
                     .skills__block-editing
-                      button.skills__block-check 
-                      button.skills__block-cross 
-                      button.skills__block-pen 
-                      button.skills__block-delete 
+                      button.skills__block-check
+                      button.skills__block-cross
+                      button.skills__block-pen
+                      button.skills__block-delete
               .skills__block-new
                 input(type="txt" placeholder="Новый навык").skills__block-new__input
                 .interest__input-block
@@ -200,9 +201,9 @@
                   button.add__block-button__text Добавить работу
               -var covers = ["../images/content/slider-1.jpg", "../images/content/slider-2.jpg", "../images/content/slider-3.jpg" ]
               each cover in covers
-                li.list-work__block 
+                li.list-work__block
                   .site__cover
-                    img(src=cover).site__cover__img 
+                    img(src=cover).site__cover__img
                     -var tags = ["HTML", "CSS", "Javascript"]
                     ul.site__tags
                       each tag in tags
@@ -214,7 +215,7 @@
                     a(href="http://loftschool.ru").site__link http://loftschool.ru
                     .list-work__button
                       button.edit__button Править
-                      button.delete__button Удалить 
+                      button.delete__button Удалить
       section.reviews__section
         .section-title__container
           .section-title__container-block Блок "Отзывы"
@@ -243,12 +244,12 @@
           .new__reviews__list
             ul.list-reveiws
               li.list-reviews__block.list-work__block--new
-                .add__block 
+                .add__block
                   button.add__block-button
                   button.add__block-button__text Добавить отзыв
               -var photos = ["../images/content/user.jpg", "../images/content/user.jpg", "../images/content/user.jpg" ]
               each photo in photos
-                li.list-review__block 
+                li.list-review__block
                   .first__info
                     .user__photo
                       img(src=photo).photo
@@ -259,7 +260,7 @@
                     p.site__info Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                     .list-work__button
                       button.edit__button Править
-                      button.delete__button Удалить 
+                      button.delete__button Удалить
       .status
         ul.status__container
             li.status__block
@@ -274,7 +275,6 @@
               .message
                 .message__text Сообщение не отправлено
                 button.cross
-
 </template>
 
 <script>
@@ -292,7 +292,6 @@
   input {
     font-size: 16px;
   }
-
 
   .authorization {
     background-image: url('~images/content/pf1.png');
